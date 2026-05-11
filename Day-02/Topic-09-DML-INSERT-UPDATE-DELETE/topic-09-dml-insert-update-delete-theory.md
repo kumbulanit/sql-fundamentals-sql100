@@ -14,6 +14,20 @@
 
 ---
 
+## Beginner Visual Map (Layman Version)
+
+DML is everyday data work: add rows, change rows, remove rows, and do it safely.
+
+![Database visual](../../assets/images/sql-database-logo.png)
+
+```mermaid
+flowchart LR
+  A[INSERT new row] --> D[Current data state]
+  B[UPDATE existing row] --> D
+  C[DELETE row] --> D
+  D --> E[COMMIT when verified]
+```
+
 ## 1. Overview of DML
 
 | Command | Action | Risk |

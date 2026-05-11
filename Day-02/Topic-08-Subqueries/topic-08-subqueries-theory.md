@@ -14,6 +14,19 @@
 
 ---
 
+## Beginner Visual Map (Layman Version)
+
+A subquery is a "question inside another question": get one answer first, then use it in the main query.
+
+![Filter visual](../../assets/images/funnel.svg)
+
+```mermaid
+flowchart TD
+    A[Inner query runs first] --> B[Returns value or table]
+    B --> C[Outer query uses that result]
+    C --> D[Final output]
+```
+
 ## 1. Why JOINs? — The Need for Multiple Tables
 
 Relational databases store data across multiple tables to avoid duplication (normalisation).

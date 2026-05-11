@@ -14,6 +14,19 @@
 
 ---
 
+## Beginner Visual Map (Layman Version)
+
+DDL is like building design work: create a new room, modify it, or remove it entirely.
+
+![Table visual](../../assets/images/table-cells.svg)
+
+```mermaid
+flowchart TD
+    A[CREATE TABLE] --> B[ALTER TABLE over time]
+    B --> C[Add indexes/views for performance]
+    C --> D[DROP only when truly obsolete]
+```
+
 ## 1. Overview of DDL
 
 DDL commands change the **structure** of the database — not the data.

@@ -14,6 +14,20 @@ By the end of this topic, participants will be able to:
 
 ---
 
+## Beginner Visual Map (Layman Version)
+
+Think of a database like a well-organized warehouse: each shelf has a label, each box has a purpose, and you can find things quickly.
+
+![Database visual](../../assets/images/sql-database-logo.png)
+
+```mermaid
+flowchart LR
+  A[Business event happens] --> B[Data is captured]
+  B --> C[Stored in database tables]
+  C --> D[SQL asks questions]
+  D --> E[Useful report or decision]
+```
+
 ## 1. What Is a Database?
 
 A **database** is an organised collection of structured data stored and accessed electronically.

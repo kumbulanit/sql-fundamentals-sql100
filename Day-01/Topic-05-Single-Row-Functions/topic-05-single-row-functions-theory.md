@@ -15,6 +15,19 @@ By the end of this topic, participants will be able to:
 
 ---
 
+## Beginner Visual Map (Layman Version)
+
+Single-row functions are mini calculators applied to each row one by one.
+
+![Database visual](../../assets/images/circle-stack.svg)
+
+```mermaid
+flowchart LR
+    A[One row] --> B[Apply function]
+    B --> C[Return transformed value]
+    C --> D[Repeat for next row]
+```
+
 ## 1. Basic SELECT Syntax
 
 The `SELECT` statement is the foundation of all data retrieval in SQL.

@@ -13,6 +13,20 @@ By the end of this topic, participants will be able to:
 
 ---
 
+## Beginner Visual Map (Layman Version)
+
+`WHERE` is a sieve: you pour all rows in, and only matching rows come out.
+
+![Filter visual](../../assets/images/funnel.svg)
+
+```mermaid
+flowchart LR
+  A[All rows in table] --> B{Condition true?}
+  B -->|Yes| C[Keep row]
+  B -->|No| D[Discard row]
+  C --> E[Final filtered results]
+```
+
 ## 1. The WHERE Clause
 
 `WHERE` restricts which **rows** are returned — it filters by a condition.

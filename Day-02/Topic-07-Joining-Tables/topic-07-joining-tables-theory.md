@@ -14,6 +14,19 @@
 
 ---
 
+## Beginner Visual Map (Layman Version)
+
+A JOIN is like matching two lists using a shared code (for example, `department_id`).
+
+![Table visual](../../assets/images/table-cells.svg)
+
+```mermaid
+flowchart LR
+    A[employees table] --> C[Match by department_id]
+    B[departments table] --> C
+    C --> D[Combined result]
+```
+
 ## 1. Why JOINs? — The Need for Multiple Tables
 
 Relational databases store data across multiple tables to avoid duplication (normalisation).

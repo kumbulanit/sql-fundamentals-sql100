@@ -14,6 +14,19 @@ By the end of this topic, participants will be able to:
 
 ---
 
+## Beginner Visual Map (Layman Version)
+
+Sorting is like arranging books on a shelf; limiting is like saying "show me only the first few books."
+
+![Table visual](../../assets/images/table-cells.svg)
+
+```mermaid
+flowchart TD
+    A[Raw query result] --> B[ORDER BY salary or date]
+    B --> C[TOP or OFFSET/FETCH]
+    C --> D[Small, ordered page of results]
+```
+
 ## 1. ORDER BY Clause
 
 `ORDER BY` sorts the result set by one or more columns.

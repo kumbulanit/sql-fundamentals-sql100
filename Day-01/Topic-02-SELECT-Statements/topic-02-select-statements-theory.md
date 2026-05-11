@@ -15,6 +15,19 @@ By the end of this topic, participants will be able to:
 
 ---
 
+## Beginner Visual Map (Layman Version)
+
+`SELECT` is like asking a receptionist for specific records: you must say what you need and where to get it.
+
+![Table visual](../../assets/images/table-cells.svg)
+
+```mermaid
+flowchart TD
+    A[FROM employees] --> B[Pick columns with SELECT]
+    B --> C[Optional rename with AS]
+    C --> D[Result grid shown in DBeaver]
+```
+
 ## 1. Basic SELECT Syntax
 
 The `SELECT` statement is the foundation of all data retrieval in SQL.

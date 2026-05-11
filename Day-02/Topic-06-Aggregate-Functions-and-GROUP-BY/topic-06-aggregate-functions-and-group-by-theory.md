@@ -14,6 +14,19 @@ By the end of this topic, participants will be able to:
 
 ---
 
+## Beginner Visual Map (Layman Version)
+
+Aggregates are like getting a summary from a long list: total, average, highest, lowest.
+
+![Database visual](../../assets/images/circle-stack.svg)
+
+```mermaid
+flowchart TD
+    A[Many employee rows] --> B[GROUP BY department]
+    B --> C[COUNT, SUM, AVG]
+    C --> D[One summary row per group]
+```
+
 ## 1. What Are Aggregate Functions?
 
 Aggregate functions perform a calculation on **multiple rows** and return a **single value**.
