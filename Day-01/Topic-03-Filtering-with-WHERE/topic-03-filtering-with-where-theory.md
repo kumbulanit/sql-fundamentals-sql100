@@ -29,6 +29,15 @@ flowchart LR
 
 ## 1. The WHERE Clause
 
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: The WHERE Clause] --> B[Example SQL]
+    B --> C[SELECT column1, column2]
+    C --> D[Understand result in plain language]
+```
+
 `WHERE` restricts which **rows** are returned — it filters by a condition.
 
 ```
@@ -47,6 +56,15 @@ WHERE   condition;
 ---
 
 ## 2. Comparison Operators
+
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: Comparison Operators] --> B[Example SQL]
+    B --> C[SELECT first_name, last_name, salary_zar]
+    C --> D[Understand result in plain language]
+```
 
 | Operator | Meaning | Example |
 |----------|---------|---------|
@@ -113,6 +131,15 @@ WHERE purchase_date < '2018-01-01';
 ---
 
 ## 3. AND, OR, NOT — Logical Operators
+
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: AND, OR, NOT — Logical Operators] --> B[Example SQL]
+    B --> C[SELECT first_name, last_name, department_id, salary_zar]
+    C --> D[Understand result in plain language]
+```
 
 ### AND — ALL conditions must be true
 ```sql
@@ -187,6 +214,15 @@ WHERE (department_id = 2 OR department_id = 3) AND salary_zar > 80000;
 
 ## 4. BETWEEN Operator
 
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: BETWEEN Operator] --> B[Example SQL]
+    B --> C[SELECT first_name, last_name, salary_zar]
+    C --> D[Understand result in plain language]
+```
+
 `BETWEEN` filters rows where a value is within a range (inclusive of both endpoints):
 
 ```sql
@@ -217,6 +253,15 @@ WHERE established_year NOT BETWEEN 1960 AND 1990;
 ---
 
 ## 5. IN Operator
+
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: IN Operator] --> B[Example SQL]
+    B --> C[SELECT first_name, last_name, department_id]
+    C --> D[Understand result in plain language]
+```
 
 `IN` matches against a **list** of values — cleaner than multiple OR conditions:
 
@@ -250,6 +295,15 @@ WHERE job_title NOT IN ('Mine Manager', 'HR Manager', 'Finance Director');
 ---
 
 ## 6. LIKE and Wildcards
+
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: LIKE and Wildcards] --> B[Example SQL]
+    B --> C[SELECT mine_name FROM mines WHERE mine_name LIKE 'B%';]
+    C --> D[Understand result in plain language]
+```
 
 `LIKE` performs **pattern matching** on text:
 
@@ -294,6 +348,15 @@ SELECT first_name FROM employees WHERE LOWER(first_name) LIKE 'no%';
 
 ## 7. IS NULL / IS NOT NULL
 
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: IS NULL / IS NOT NULL] --> B[Example SQL]
+    B --> C[SELECT first_name, last_name, job_title, mine_id]
+    C --> D[Understand result in plain language]
+```
+
 ```sql
 -- Employees with no mine assignment (Head Office)
 SELECT first_name, last_name, job_title, mine_id
@@ -318,6 +381,15 @@ WHERE mine_id != NULL       -- Always false!
 ---
 
 ## 8. Combining Everything — Realistic Scenarios
+
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: Combining Everything — Realistic Scenarios] --> B[Example SQL]
+    B --> C[SELECT]
+    C --> D[Understand result in plain language]
+```
 
 ### Scenario 1: Safety Report — Active mining employees at Beeshoek
 ```sql

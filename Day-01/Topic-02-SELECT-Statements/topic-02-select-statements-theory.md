@@ -30,6 +30,15 @@ flowchart TD
 
 ## 1. Basic SELECT Syntax
 
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: Basic SELECT Syntax] --> B[Example SQL]
+    B --> C[SELECT column1, column2, ...]
+    C --> D[Understand result in plain language]
+```
+
 The `SELECT` statement is the foundation of all data retrieval in SQL.
 
 ```
@@ -67,6 +76,15 @@ SELECT mine_name, mine_type, province FROM mines;
 
 ## 2. Column Aliases (AS)
 
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: Column Aliases (AS)] --> B[Example SQL]
+    B --> C[SELECT salary_zar FROM employees;]
+    C --> D[Understand result in plain language]
+```
+
 Aliases rename a column in the output — they do NOT change the actual column name in the table.
 
 ```sql
@@ -99,6 +117,15 @@ FROM employees;
 
 ## 3. Selecting Distinct Values
 
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: Selecting Distinct Values] --> B[Example SQL]
+    B --> C[SELECT job_title FROM employees;]
+    C --> D[Understand result in plain language]
+```
+
 `DISTINCT` removes duplicate values from results.
 
 ```sql
@@ -124,6 +151,15 @@ SELECT DISTINCT department_id, job_title FROM employees;
 ---
 
 ## 4. Arithmetic Expressions in SELECT
+
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: Arithmetic Expressions in SELECT] --> B[Example SQL]
+    B --> C[SELECT]
+    C --> D[Understand result in plain language]
+```
 
 SQL can perform math directly in the SELECT clause:
 
@@ -160,6 +196,15 @@ FROM departments;
 
 ## 5. String Concatenation
 
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: String Concatenation] --> B[Example SQL]
+    B --> C[SELECT]
+    C --> D[Understand result in plain language]
+```
+
 Combine text columns using `CONCAT()` (supported in SQL Server):
 
 ```sql
@@ -184,6 +229,15 @@ FROM mines;
 
 ## 6. Introduction to NULL Values
 
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: Introduction to NULL Values] --> B[Example SQL]
+    B --> C[SELECT first_name, last_name, mine_id]
+    C --> D[Understand result in plain language]
+```
+
 **NULL** means "unknown" or "no value" — it is NOT zero, NOT an empty string.
 
 ```sql
@@ -201,6 +255,15 @@ SELECT 50000 + NULL;   -- Returns: NULL (not 50000)
 ---
 
 ## 7. String Functions
+
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: String Functions] --> B[Example SQL]
+    B --> C[SELECT UPPER(first_name) AS first_name_upper FROM employees;]
+    C --> D[Understand result in plain language]
+```
 
 ```sql
 -- UPPER — convert to uppercase
@@ -245,6 +308,15 @@ FROM employees;
 
 ## 8. Numeric Functions
 
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: Numeric Functions] --> B[Example SQL]
+    B --> C[SELECT]
+    C --> D[Understand result in plain language]
+```
+
 ```sql
 -- ROUND — round to decimal places
 SELECT
@@ -280,6 +352,15 @@ FROM departments;
 ---
 
 ## 9. Date & Time Functions
+
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: Date & Time Functions] --> B[Example SQL]
+    B --> C[SELECT GETDATE() AS current_datetime;]
+    C --> D[Understand result in plain language]
+```
 
 ```sql
 -- Current date and time
@@ -327,6 +408,15 @@ OFFSET 0 ROWS FETCH NEXT 5 ROWS ONLY;
 
 ## 10. Conversion Functions
 
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: Conversion Functions] --> B[Example SQL]
+    B --> C[SELECT CAST(salary_zar AS UNSIGNED) AS salary_no_decimals]
+    C --> D[Understand result in plain language]
+```
+
 ```sql
 -- CAST — convert data types
 SELECT CAST(salary_zar AS UNSIGNED)  AS salary_no_decimals
@@ -344,6 +434,15 @@ FROM employees;
 ---
 
 ## 11. CASE WHEN — Conditional Logic
+
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: CASE WHEN — Conditional Logic] --> B[Example SQL]
+    B --> C[SELECT]
+    C --> D[Understand result in plain language]
+```
 
 `CASE WHEN` is SQL's equivalent of IF/ELSE:
 
@@ -387,6 +486,15 @@ ORDER BY budget_zar DESC;
 ---
 
 ## 12. COALESCE and NULLIF
+
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: COALESCE and NULLIF] --> B[Example SQL]
+    B --> C[SELECT]
+    C --> D[Understand result in plain language]
+```
 
 ```sql
 -- COALESCE — return the first non-NULL value

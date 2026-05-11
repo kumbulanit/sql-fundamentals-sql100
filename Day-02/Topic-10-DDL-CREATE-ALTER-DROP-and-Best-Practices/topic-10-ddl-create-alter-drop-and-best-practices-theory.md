@@ -29,6 +29,15 @@ flowchart TD
 
 ## 1. Overview of DDL
 
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: Overview of DDL] --> B[Example SQL]
+    B --> C[SELECT ...]
+    C --> D[Understand result in plain language]
+```
+
 DDL commands change the **structure** of the database — not the data.
 
 | Command | Purpose |
@@ -45,6 +54,15 @@ DDL commands change the **structure** of the database — not the data.
 ---
 
 ## 2. SQL Data Types
+
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: SQL Data Types] --> B[Example SQL]
+    B --> C[SELECT ...]
+    C --> D[Understand result in plain language]
+```
 
 Choosing the right data type matters for storage efficiency and data integrity.
 
@@ -87,6 +105,15 @@ Choosing the right data type matters for storage efficiency and data integrity.
 ---
 
 ## 3. CREATE TABLE
+
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: CREATE TABLE] --> B[Example SQL]
+    B --> C[CREATE TABLE table_name (]
+    C --> D[Understand result in plain language]
+```
 
 ```sql
 CREATE TABLE table_name (
@@ -140,6 +167,15 @@ END;
 
 ## 4. ALTER TABLE — Modifying Structure
 
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: ALTER TABLE — Modifying Structure] --> B[Example SQL]
+    B --> C[ALTER TABLE employees]
+    C --> D[Understand result in plain language]
+```
+
 ### Add a Column
 ```sql
 -- Add phone number to employees
@@ -191,6 +227,15 @@ RENAME TO salary_snapshots;
 
 ## 5. DROP TABLE
 
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: DROP TABLE] --> B[Example SQL]
+    B --> C[DROP TABLE salary_snapshot_2024;]
+    C --> D[Understand result in plain language]
+```
+
 ```sql
 -- Permanently deletes table structure AND all data — CANNOT be undone!
 DROP TABLE salary_snapshot_2024;
@@ -207,6 +252,15 @@ DROP TABLE IF EXISTS table1, table2;
 ---
 
 ## 6. CREATE INDEX
+
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: CREATE INDEX] --> B[Example SQL]
+    B --> C[CREATE INDEX idx_employee_email]
+    C --> D[Understand result in plain language]
+```
 
 An index improves SELECT query performance on large tables:
 
@@ -239,6 +293,15 @@ DROP INDEX idx_employee_email ON employees;
 ---
 
 ## 7. CREATE VIEW
+
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: CREATE VIEW] --> B[Example SQL]
+    B --> C[CREATE VIEW vw_employee_directory AS]
+    C --> D[Understand result in plain language]
+```
 
 A **view** is a saved SELECT query that behaves like a virtual table:
 
@@ -301,6 +364,15 @@ SELECT name FROM sys.views ORDER BY name;
 
 ## 8. SQL Best Practices
 
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: SQL Best Practices] --> B[Example SQL]
+    B --> C[SELECT]
+    C --> D[Understand result in plain language]
+```
+
 ### Formatting & Readability
 ```sql
 -- ✅ Good: Uppercase keywords, aligned columns, lowercase identifiers
@@ -339,6 +411,15 @@ SELECT employee_id, first_name, last_name, job_title FROM employees;
 
 ## 9. Common SQL Mistakes to Avoid
 
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: Common SQL Mistakes to Avoid] --> B[Example SQL]
+    B --> C[SELECT ...]
+    C --> D[Understand result in plain language]
+```
+
 | # | Mistake | Impact | Prevention |
 |---|---------|--------|------------|
 | 1 | UPDATE/DELETE without WHERE | Data loss — all rows affected | Always check with SELECT first |
@@ -355,6 +436,15 @@ SELECT employee_id, first_name, last_name, job_title FROM employees;
 ---
 
 ## 10. Next Steps — What to Learn After SQL100
+
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: Next Steps — What to Learn After SQL100] --> B[Example SQL]
+    B --> C[CREATE TABLE (IF NOT EXISTS) t (col type (constraints), PRIMARY KEY(co]
+    C --> D[Understand result in plain language]
+```
 
 | Path | Topics |
 |------|--------|

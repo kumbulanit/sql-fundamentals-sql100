@@ -29,6 +29,15 @@ flowchart LR
 
 ## 1. Why JOINs? — The Need for Multiple Tables
 
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: Why JOINs? — The Need for Multiple Tables] --> B[Example SQL]
+    B --> C[SELECT ...]
+    C --> D[Understand result in plain language]
+```
+
 Relational databases store data across multiple tables to avoid duplication (normalisation).
 
 **Without JOINs — data duplication problem:**
@@ -54,6 +63,15 @@ JOINs re-combine this data at query time — without duplicating storage.
 
 ## 2. JOIN Syntax
 
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: JOIN Syntax] --> B[Example SQL]
+    B --> C[SELECT t1.col1, t2.col2]
+    C --> D[Understand result in plain language]
+```
+
 ```sql
 SELECT  t1.col1, t2.col2
 FROM    table1  t1
@@ -63,6 +81,15 @@ JOIN    table2  t2  ON t1.shared_key = t2.shared_key;
 ---
 
 ## 3. INNER JOIN — Matching Rows Only
+
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: INNER JOIN — Matching Rows Only] --> B[Example SQL]
+    B --> C[SELECT]
+    C --> D[Understand result in plain language]
+```
 
 Returns rows where the join condition is satisfied in **BOTH** tables.
 
@@ -112,6 +139,15 @@ INNER JOIN mines m ON eq.mine_id = m.mine_id;
 
 ## 4. LEFT OUTER JOIN — All Left, Matching Right
 
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: LEFT OUTER JOIN — All Left, Matching Right] --> B[Example SQL]
+    B --> C[SELECT]
+    C --> D[Understand result in plain language]
+```
+
 Returns **all rows from the LEFT table** and matching rows from the right table.  
 Where there's no match, NULL fills in right-table columns.
 
@@ -145,6 +181,15 @@ WHERE m.mine_id IS NULL;  -- rows where no match was found
 
 ## 5. RIGHT OUTER JOIN — All Right, Matching Left
 
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: RIGHT OUTER JOIN — All Right, Matching Left] --> B[Example SQL]
+    B --> C[SELECT]
+    C --> D[Understand result in plain language]
+```
+
 Returns **all rows from the RIGHT table** and matching rows from the left.
 
 ```sql
@@ -169,6 +214,15 @@ WHERE e.employee_id IS NULL;
 
 ## 6. FULL OUTER JOIN
 
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: FULL OUTER JOIN] --> B[Example SQL]
+    B --> C[SELECT e.first_name, e.last_name, m.mine_name]
+    C --> D[Understand result in plain language]
+```
+
 Returns **all rows from BOTH tables** — NULLs where no match.
 
 > ⚠️ SQL Server supports FULL OUTER JOIN directly. Use it instead of the UNION workaround.
@@ -189,6 +243,15 @@ RIGHT JOIN mines m ON e.mine_id = m.mine_id;
 ---
 
 ## 7. Joining More Than Two Tables
+
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: Joining More Than Two Tables] --> B[Example SQL]
+    B --> C[SELECT]
+    C --> D[Understand result in plain language]
+```
 
 ```sql
 -- Employee full detail: name + department + mine
@@ -220,6 +283,15 @@ ORDER BY m.mine_name, p.production_month;
 
 ## 8. Table Aliases in JOINs
 
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: Table Aliases in JOINs] --> B[Example SQL]
+    B --> C[SELECT employees.first_name, departments.department_name]
+    C --> D[Understand result in plain language]
+```
+
 Aliases make multi-table queries readable:
 
 ```sql
@@ -237,6 +309,15 @@ INNER JOIN departments d ON e.department_id = d.department_id;
 ---
 
 ## 9. Self JOIN — Table Joining Itself
+
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: Self JOIN — Table Joining Itself] --> B[Example SQL]
+    B --> C[SELECT]
+    C --> D[Understand result in plain language]
+```
 
 Used when a table references itself (like the `manager_id` → `employee_id` relationship):
 
@@ -258,6 +339,15 @@ ORDER BY m.last_name, e.last_name;
 
 ## 10. JOIN Type Decision Guide
 
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: JOIN Type Decision Guide] --> B[Example SQL]
+    B --> C[All from LEFT + matching from right? LEFT JOIN]
+    C --> D[Understand result in plain language]
+```
+
 ```
 Do you want...                          Use...
 ─────────────────────────────────────────────────────────
@@ -273,6 +363,15 @@ Find unmatched rows in right table?     RIGHT JOIN + WHERE left.id IS NULL
 ---
 
 ## 11. Subqueries
+
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: Subqueries] --> B[Example SQL]
+    B --> C[SELECT outer_columns]
+    C --> D[Understand result in plain language]
+```
 
 A **subquery** (inner query / nested query) is a SELECT inside another SQL statement.
 
@@ -386,6 +485,15 @@ WHERE NOT EXISTS (
 ---
 
 ## 12. JOIN vs Subquery — When to Use Which
+
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: JOIN vs Subquery — When to Use Which] --> B[Example SQL]
+    B --> C[SELECT ...]
+    C --> D[Understand result in plain language]
+```
 
 | Scenario | Better Choice | Reason |
 |----------|--------------|--------|

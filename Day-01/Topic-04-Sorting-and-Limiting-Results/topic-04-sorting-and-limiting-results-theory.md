@@ -29,6 +29,15 @@ flowchart TD
 
 ## 1. ORDER BY Clause
 
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: ORDER BY Clause] --> B[Example SQL]
+    B --> C[SELECT columns]
+    C --> D[Understand result in plain language]
+```
+
 `ORDER BY` sorts the result set by one or more columns.
 
 ```
@@ -73,6 +82,15 @@ ORDER BY last_name ASC;
 
 ## 2. Sorting by Multiple Columns
 
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: Sorting by Multiple Columns] --> B[Example SQL]
+    B --> C[SELECT first_name, last_name, department_id, salary_zar]
+    C --> D[Understand result in plain language]
+```
+
 When the first sort column has ties, the second column breaks the tie:
 
 ```sql
@@ -100,6 +118,15 @@ ORDER BY province ASC,
 
 ## 3. Sorting by Column Position
 
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: Sorting by Column Position] --> B[Example SQL]
+    B --> C[SELECT first_name, last_name, salary_zar]
+    C --> D[Understand result in plain language]
+```
+
 You can reference columns by their position in the SELECT list:
 
 ```sql
@@ -116,6 +143,15 @@ ORDER BY 3 DESC, 2 ASC;
 ---
 
 ## 4. Sorting with Expressions and Aliases
+
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: Sorting with Expressions and Aliases] --> B[Example SQL]
+    B --> C[SELECT]
+    C --> D[Understand result in plain language]
+```
 
 ```sql
 -- Sort by calculated annual salary
@@ -148,6 +184,15 @@ ORDER BY sort_order;
 
 ## 5. NULLs in Sorted Results
 
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: NULLs in Sorted Results] --> B[Example SQL]
+    B --> C[SELECT first_name, last_name, mine_id]
+    C --> D[Understand result in plain language]
+```
+
 By default in SQL Server:
 - `ORDER BY ASC` → NULLs appear **first**
 - `ORDER BY DESC` → NULLs appear **last**
@@ -174,6 +219,15 @@ ORDER BY mine_id IS NULL DESC, mine_id ASC;
 
 ## 6. TOP — Restrict Returned Rows
 
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: TOP — Restrict Returned Rows] --> B[Example SQL]
+    B --> C[SELECT TOP (5) first_name, last_name, salary_zar]
+    C --> D[Understand result in plain language]
+```
+
 `TOP` restricts how many rows are returned. Always use with `ORDER BY` for predictable results.
 
 ```sql
@@ -196,6 +250,15 @@ ORDER BY hire_date DESC;
 ---
 
 ## 7. OFFSET/FETCH — Skip Rows (Pagination)
+
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: OFFSET/FETCH — Skip Rows (Pagination)] --> B[Example SQL]
+    B --> C[OFFSET rows_to_skip ROWS FETCH NEXT rows_to_return ROWS ONLY]
+    C --> D[Understand result in plain language]
+```
 
 `OFFSET` skips a number of rows before starting to return results. Combined with `FETCH NEXT` for pagination:
 
@@ -240,6 +303,15 @@ Page 3: OFFSET = (3-1) × 5 = 10
 
 ## 8. Complete Query Structure — All Clauses
 
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: Complete Query Structure — All Clauses] --> B[Example SQL]
+    B --> C[SELECT (DISTINCT) column1, column2, expression AS alias]
+    C --> D[Understand result in plain language]
+```
+
 ```sql
 SELECT   [DISTINCT] column1, column2, expression AS alias
 FROM     table_name
@@ -276,6 +348,15 @@ WHERE salary_zar * 12 > 1000000;  -- Works!
 ---
 
 ## 9. Realistic Sorting Scenarios
+
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: Realistic Sorting Scenarios] --> B[Example SQL]
+    B --> C[SELECT]
+    C --> D[Understand result in plain language]
+```
 
 ### Scenario 1: Management Report — Top 5 Earners
 ```sql

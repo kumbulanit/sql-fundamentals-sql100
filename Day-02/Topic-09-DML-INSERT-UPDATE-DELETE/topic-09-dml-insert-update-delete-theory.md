@@ -30,6 +30,15 @@ flowchart LR
 
 ## 1. Overview of DML
 
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: Overview of DML] --> B[Example SQL]
+    B --> C[SELECT ...]
+    C --> D[Understand result in plain language]
+```
+
 | Command | Action | Risk |
 |---------|--------|------|
 | `INSERT` | Add new rows | Low (adds only) |
@@ -42,6 +51,15 @@ flowchart LR
 ---
 
 ## 2. INSERT INTO — Adding Rows
+
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: INSERT INTO — Adding Rows] --> B[Example SQL]
+    B --> C[INSERT INTO employees]
+    C --> D[Understand result in plain language]
+```
 
 ### Single Row Insert
 ```sql
@@ -103,6 +121,15 @@ INSERT INTO employees (first_name, last_name ...) VALUES ('Test', 'User'...);
 ---
 
 ## 3. UPDATE — Modifying Existing Rows
+
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: UPDATE — Modifying Existing Rows] --> B[Example SQL]
+    B --> C[UPDATE table_name]
+    C --> D[Understand result in plain language]
+```
 
 ```
 UPDATE  table_name
@@ -183,6 +210,15 @@ WHERE employee_id = 25;
 
 ## 4. DELETE — Removing Rows
 
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: DELETE — Removing Rows] --> B[Example SQL]
+    B --> C[DELETE FROM table_name]
+    C --> D[Understand result in plain language]
+```
+
 ```
 DELETE FROM table_name
 WHERE condition;    ← ALWAYS include WHERE!
@@ -236,6 +272,15 @@ WHERE employee_id = 99;
 
 ## 5. TRUNCATE vs DELETE
 
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: TRUNCATE vs DELETE] --> B[Example SQL]
+    B --> C[DELETE FROM employee_salary_snapshot;]
+    C --> D[Understand result in plain language]
+```
+
 | Feature | DELETE (with no WHERE) | TRUNCATE |
 |---------|----------------------|---------|
 | Removes all rows | Yes | Yes |
@@ -258,6 +303,15 @@ DELETE FROM employee_salary_snapshot;
 ---
 
 ## 6. Transactions — COMMIT and ROLLBACK
+
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: Transactions — COMMIT and ROLLBACK] --> B[Example SQL]
+    B --> C[SELECT first_name, last_name, salary_zar FROM employees WHERE departme]
+    C --> D[Understand result in plain language]
+```
 
 A **transaction** groups SQL statements so they either all succeed or all fail together.
 
@@ -309,6 +363,15 @@ COMMIT;
 ---
 
 ## 7. Referential Integrity and DML
+
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: Referential Integrity and DML] --> B[Example SQL]
+    B --> C[DELETE FROM departments WHERE department_id = 2;]
+    C --> D[Understand result in plain language]
+```
 
 When deleting or updating parent records, referential integrity may prevent the operation:
 

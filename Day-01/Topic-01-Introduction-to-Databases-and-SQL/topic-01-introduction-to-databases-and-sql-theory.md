@@ -30,6 +30,15 @@ flowchart LR
 
 ## 1. What Is a Database?
 
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: What Is a Database?] --> B[Example SQL]
+    B --> C[SELECT ...]
+    C --> D[Understand result in plain language]
+```
+
 A **database** is an organised collection of structured data stored and accessed electronically.
 
 Without a database, Assmang would store data in:
@@ -56,6 +65,15 @@ A **Database Management System (DBMS)** solves these problems by providing:
 ---
 
 ## 2. Relational vs. Non-Relational Databases
+
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: Relational vs. Non-Relational Databases] --> B[Example SQL]
+    B --> C[SELECT ...]
+    C --> D[Understand result in plain language]
+```
 
 ### Relational Database (RDBMS)
 - Stores data in **tables** (rows and columns)
@@ -103,6 +121,15 @@ A **Database Management System (DBMS)** solves these problems by providing:
 
 ## 3. Key Concepts: Tables, Rows, Columns
 
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: Key Concepts: Tables, Rows, Columns] --> B[Example SQL]
+    B --> C[SELECT ...]
+    C --> D[Understand result in plain language]
+```
+
 ```
 TABLE: employees
 ┌─────────────┬────────────┬───────────┬────────────────┬────────────┐
@@ -128,6 +155,15 @@ TABLE: employees
 ---
 
 ## 4. Primary Keys and Foreign Keys
+
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: Primary Keys and Foreign Keys] --> B[Example SQL]
+    B --> C[SELECT ...]
+    C --> D[Understand result in plain language]
+```
 
 ### Primary Key (PK)
 - **Uniquely identifies** each row in a table
@@ -167,6 +203,15 @@ department_id  dept_name        employee_id  name       department_id
 
 ## 5. What Is SQL?
 
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: What Is SQL?] --> B[Example SQL]
+    B --> C[SELECT ...]
+    C --> D[Understand result in plain language]
+```
+
 **SQL** = Structured Query Language
 
 - Pronounced: "S-Q-L" or "sequel"
@@ -185,6 +230,15 @@ SQL allows you to:
 ---
 
 ## 6. SQL Sublanguages
+
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: SQL Sublanguages] --> B[Example SQL]
+    B --> C[│ └── SELECT (retrieve data)]
+    C --> D[Understand result in plain language]
+```
 
 SQL is divided into sublanguages by purpose:
 
@@ -215,6 +269,15 @@ SQL
 ---
 
 ## 7. The Assmang Training Database
+
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: The Assmang Training Database] --> B[Example SQL]
+    B --> C[SELECT ...]
+    C --> D[Understand result in plain language]
+```
 
 For this course, we use `assmang_training` — a database modelled on Assmang's operations:
 
@@ -265,6 +328,15 @@ assmang_training database
 
 ## 8. SQL Syntax Basics
 
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: SQL Syntax Basics] --> B[Example SQL]
+    B --> C[SELECT * FROM employees; -- works]
+    C --> D[Understand result in plain language]
+```
+
 ### Case Sensitivity
 ```sql
 -- SQL keywords are NOT case-sensitive:
@@ -310,6 +382,15 @@ WHERE department_id = 2;
 ---
 
 ## 9. Connecting to the Training Database
+
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: Connecting to the Training Database] --> B[Example SQL]
+    B --> C[SELECT * FROM departments;]
+    C --> D[Understand result in plain language]
+```
 
 After loading `v1_assmang_setup.sql`, verify your connection:
 

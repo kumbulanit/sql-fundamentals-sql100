@@ -29,6 +29,15 @@ flowchart TD
 
 ## 1. What Are Aggregate Functions?
 
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: What Are Aggregate Functions?] --> B[Example SQL]
+    B --> C[SELECT ...]
+    C --> D[Understand result in plain language]
+```
+
 Aggregate functions perform a calculation on **multiple rows** and return a **single value**.
 
 | Function | Returns | NULL handling |
@@ -43,6 +52,15 @@ Aggregate functions perform a calculation on **multiple rows** and return a **si
 ---
 
 ## 2. COUNT()
+
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: COUNT()] --> B[Example SQL]
+    B --> C[SELECT COUNT(*) AS total_employees FROM employees;]
+    C --> D[Understand result in plain language]
+```
 
 ```sql
 -- Count all employees (rows)
@@ -68,6 +86,15 @@ WHERE department_id = 2;
 
 ## 3. SUM()
 
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: SUM()] --> B[Example SQL]
+    B --> C[SELECT SUM(salary_zar) AS total_monthly_payroll FROM employees;]
+    C --> D[Understand result in plain language]
+```
+
 ```sql
 -- Total salary bill for all employees
 SELECT SUM(salary_zar) AS total_monthly_payroll FROM employees;
@@ -91,6 +118,15 @@ WHERE mine_id = 1;
 
 ## 4. AVG()
 
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: AVG()] --> B[Example SQL]
+    B --> C[SELECT ROUND(AVG(salary_zar), 2) AS avg_monthly_salary FROM employees;]
+    C --> D[Understand result in plain language]
+```
+
 ```sql
 -- Average salary
 SELECT ROUND(AVG(salary_zar), 2) AS avg_monthly_salary FROM employees;
@@ -107,6 +143,15 @@ SELECT ROUND(AVG(purchase_price), 2) AS avg_equipment_cost FROM equipment;
 ---
 
 ## 5. MIN() and MAX()
+
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: MIN() and MAX()] --> B[Example SQL]
+    B --> C[SELECT]
+    C --> D[Understand result in plain language]
+```
 
 ```sql
 -- Salary range
@@ -133,6 +178,15 @@ WHERE mine_id = 1;
 ---
 
 ## 6. GROUP BY — Grouping Rows
+
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: GROUP BY — Grouping Rows] --> B[Example SQL]
+    B --> C[SELECT department_id, COUNT(*) AS employee_count]
+    C --> D[Understand result in plain language]
+```
 
 Without GROUP BY, aggregates return a single row for the entire table.  
 With GROUP BY, aggregates return one row **per group**.
@@ -211,6 +265,15 @@ GROUP BY mine_id;
 
 ## 7. HAVING — Filtering Groups
 
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: HAVING — Filtering Groups] --> B[Example SQL]
+    B --> C[SELECT department_id, COUNT(*) AS headcount]
+    C --> D[Understand result in plain language]
+```
+
 `HAVING` filters the **result of a GROUP BY** — like WHERE but for groups.
 
 ```sql
@@ -247,6 +310,15 @@ HAVING COUNT(*) > 3;
 ---
 
 ## 8. WHERE vs HAVING — Key Distinction
+
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: WHERE vs HAVING — Key Distinction] --> B[Example SQL]
+    B --> C[SELECT department_id, COUNT(*)]
+    C --> D[Understand result in plain language]
+```
 
 ```
 ┌────────────────────────────────────────────────────────────────┐
@@ -289,6 +361,15 @@ ORDER BY avg_salary DESC;        -- Step 4: Sort
 
 ## 9. Full Query Execution Order
 
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: Full Query Execution Order] --> B[Example SQL]
+    B --> C[FROM | 1 | Load the table(s)]
+    C --> D[Understand result in plain language]
+```
+
 ```
 Clause      | Execution Order | What It Does
 ────────────────────────────────────────────────────────────────
@@ -321,6 +402,15 @@ OFFSET 0 ROWS FETCH NEXT 5 ROWS ONLY;    -- 6. Top 5 only
 ---
 
 ## 10. Realistic Assmang Scenarios
+
+### Concept Diagram
+
+```mermaid
+flowchart LR
+    A[Goal: Realistic Assmang Scenarios] --> B[Example SQL]
+    B --> C[SELECT]
+    C --> D[Understand result in plain language]
+```
 
 ### Scenario 1: Monthly Payroll Summary by Department
 ```sql
